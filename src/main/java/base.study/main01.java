@@ -41,12 +41,25 @@ public class main01 {
         for(int i=0;i<arr02.length;i++) {
             System.out.print(arr02[i] + "  ");
         }
-        // 如果声明对象的数组，则new出来数组以后只是一个指针，并没有实例化，包括Integer。
+        System.out.print("\n");
+
+        // 如果声明对象的数组，则new出来数组以后只是一个为null的指针，包括基础数据类型的封装对象
         String[] strs = new String[5];
         System.out.print("strs的长度："+strs.length+"  内容：");
-        for(int i=0;i<arr02.length;i++) {
+        for(int i=0;i<strs.length;i++) {
             System.out.print(strs[i] + "  ");
         }
+        System.out.println();
+
+        // 数组动态初始化及遍历
+        for(int i=0;i< strs.length;i++){
+            strs[i]="zjt"+i;
+        }
+        for(String str:strs){
+            System.out.print(str+" ");
+        }
+        System.out.println();
+
 
 
     }
